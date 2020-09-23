@@ -14,7 +14,6 @@
 | last_name_kana        | string  | null: false             | 
 | birthday              | date    | null: false             | ○
 
-
 ### Association
 - has_many :products
 - has_many :orders
@@ -23,8 +22,8 @@
 
 ## items テーブル
 
-| Column                    | Type       | Options                        | List 
-| --------------------------| -----------|--------------------------------| ---- 
+| Column               | Type       | Options                        | List 
+| ---------------------| -----------|--------------------------------| ---- 
 | name                 | string     | null: false                    | 
 | text                 | text       | null: false                    | 
 | category             | integer    | null: false                    | ○
@@ -33,7 +32,7 @@
 | prefecture           | integer    | null: false                    | ○
 | scheduled_delivery   | integer    | null: false                    | ○
 | price                | integer    | null: false                    | 
-| user                      | references | null: false, foreign_key: true | 
+| user                 | references | null: false, foreign_key: true | 
 
 ### Association
 - belongs_to :user
@@ -69,36 +68,3 @@
 
 ### Association
 - belongs_to :order
-
-
-
-
-
-
-
-
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
