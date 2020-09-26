@@ -12,7 +12,7 @@
 | last_name             | string  | null: false             | 
 | first_name_kana       | string  | null: false             | 
 | last_name_kana        | string  | null: false             | 
-| birthday              | date    | null: false             | ○
+| birthday_id           | date    | null: false             | ○
 
 ### Association
 - has_many :products
@@ -22,17 +22,17 @@
 
 ## items テーブル
 
-| Column               | Type       | Options                        | List 
-| ---------------------| -----------|--------------------------------| ---- 
-| name                 | string     | null: false                    | 
-| text                 | text       | null: false                    | 
-| category             | integer    | null: false                    | ○
-| sales_status         | integer    | null: false                    | ○
-| shipping_fee_status  | integer    | null: false                    | ○
-| prefecture           | integer    | null: false                    | ○
-| scheduled_delivery   | integer    | null: false                    | ○
-| price                | integer    | null: false                    | 
-| user                 | references | null: false, foreign_key: true | 
+| Column                 | Type       | Options                        | List 
+| ---------------------- | -----------|--------------------------------| ---- 
+| name                   | string     | null: false                    | 
+| text                   | text       | null: false                    | 
+| category_id            | integer    | null: false                    | ○
+| sales_status_id        | integer    | null: false                    | ○
+| shipping_fee_status_id | integer    | null: false                    | ○
+| prefecture_id          | integer    | null: false                    | ○
+| scheduled_delivery_id  | integer    | null: false                    | ○
+| price                  | integer    | null: false                    | 
+| user                   | references | null: false, foreign_key: true | 
 
 ### Association
 - belongs_to :user
@@ -59,7 +59,7 @@
 | Column       | Type       | Options                        | List
 | -------------|------------|--------------------------------| ----
 | postal_code  | string     | null: false                    | 
-| prefecture   | integer    | null: false                    | ○
+| prefecture_id| integer    | null: false                    | ○
 | city         | string     | null: false                    | 
 | addresses    | string     | null: false                    | 
 | building     | string     |                                | 
