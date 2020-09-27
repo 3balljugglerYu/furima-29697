@@ -42,32 +42,33 @@ RSpec.describe Item, type: :model do
 
       it "カテゴリーを選択していないと登録できない" do
         @item.category_id  = "0"
+        # binding.pry
         @item.valid?
-        expect(@item.errors.full_messages).to include("Category must be other than 0")
+        expect(@item.errors.full_messages).to include("Category Select")
       end
 
       it "商品の状態を選択していないと登録できない" do
         @item.sales_status_id  = "0"
         @item.valid?
-        expect(@item.errors.full_messages).to include("Sales status must be other than 0")
+        expect(@item.errors.full_messages).to include("Sales status Select")
       end
 
       it "配送料の負担を選択していないと登録できない" do
         @item.shipping_fee_status_id  = "0"
         @item.valid?
-        expect(@item.errors.full_messages).to include("Shipping fee status must be other than 0")
+        expect(@item.errors.full_messages).to include("Shipping fee status Select")
       end
 
       it "発送元の地域を選択していないと登録できない" do
         @item.prefecture_id  = "0"
         @item.valid?
-        expect(@item.errors.full_messages).to include("Prefecture must be other than 0")
+        expect(@item.errors.full_messages).to include("Prefecture Select")
       end
 
       it "発送までの日数を選択していないと登録できない" do
         @item.scheduled_delivery_id  = "0"
         @item.valid?
-        expect(@item.errors.full_messages).to include("Scheduled delivery must be other than 0")
+        expect(@item.errors.full_messages).to include("Scheduled delivery Select")
       end
 
       it "販売価格が空だと登録できない" do
