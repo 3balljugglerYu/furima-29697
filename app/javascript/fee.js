@@ -1,6 +1,7 @@
 
 
 window.addEventListener('load', function(){
+// setInterval(check, 1000, function(){
   const inputPrice = document.getElementById("item-price");
 
   inputPrice.addEventListener("keyup", () => {
@@ -16,3 +17,4 @@ window.addEventListener('load', function(){
   
 
 })
+// setInterval(check, 1000);
