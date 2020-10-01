@@ -3,8 +3,8 @@ class OrdersController < ApplicationController
   before_action :set_order, only: [:index, :create]
 
   def index
-    return redirect_to root_path if !@item.order.nil? || user_signed_in? == false || current_user.id == @item.user_id
-
+    return redirect_to new_user_session_path if user_signed_in? == false
+    return redirect_to root_path if !@item.order.nil? || current_user.id == @item.user_id
     @order_shipping = OrderShipping.new
   end
 
