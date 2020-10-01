@@ -10,6 +10,11 @@ RSpec.describe OrderShipping, type: :model do
       it 'すべての値が正しく入力されていれば決済処理が完了できること' do
         expect(@payment).to be_valid
       end
+
+      it '建物名が空でも決済処理が完了できること' do
+        @payment.building = ''
+        expect(@payment).to be_valid
+      end
     end
 
     context '決済処理がうまくいかないとき' do
