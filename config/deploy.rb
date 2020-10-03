@@ -5,7 +5,7 @@ lock '3.14.1'
 set :application, 'furima-29697'
 
 # どのリポジトリからアプリをpullするかを指定する
-set :repo_url,  '3balljugglerYu/furima-29697'
+set :repo_url,  'git@github.com:3balljugglerYu/furima-29697.git'
 
 # バージョンが変わっても共通で参照するディレクトリを指定
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
