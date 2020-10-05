@@ -5,7 +5,8 @@
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
-    <%= form_with(model: @item, local: true) do |f| %>
+    <%= form_with model: @item, id: 'itemConfirm',local: true do |f| %>
+    <%#= form_with url: item_orders_path, id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
     <%= render 'shared/error_messages', model: f.object %>
@@ -137,8 +138,8 @@
     </div>
     <%# /注意書き %>
     <%# 下部ボタン %>
-    <div class="sell-btn-contents",id="confirm">
-      <%= f.submit "出品する" ,class:"sell-btn" %>
+    <div class="sell-btn-contents">
+      <%= f.submit "出品する" ,class:"sell-btn" , id: "itemSubmit"%>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>

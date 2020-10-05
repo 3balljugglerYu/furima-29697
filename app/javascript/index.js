@@ -1,14 +1,17 @@
-// let hello = "konn"
-// console.log(hello)
 
-// let confirm = document.getElementById("confirm")
-// console.log(confirm)
+const confirm = () => {
+  const form = document.getElementById("itemConfirm");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-// window.addEventListener('load', function(){
-
-//   const confirmButton = document.getElementById("confirm")
-
-//   confirmButton.addEventListener('mouseover',function(){
-//     console.log("OK")
-//   })
-// })
+    var result = window.confirm('出品してよろしいですか？');
+    
+    if( result ) {
+      document.getElementById("itemConfirm").submit();
+    }
+    else{
+      document.getElementById("itemSubmit").disabled = false;
+    }
+  });
+};
+window.addEventListener("load", confirm);
