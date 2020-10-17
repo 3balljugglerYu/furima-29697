@@ -11,6 +11,4 @@ window.addEventListener('load', function(){
     const profit = document.getElementById("profit")
     profit.innerHTML = profitCalc
   })
-  
-
 })
